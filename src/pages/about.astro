@@ -1,0 +1,166 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | imelda kasente" description="About imelda kasente Lorem Ipsum">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/ima.jpg"
+					alt="imelda kasente at work with a colleague"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">My Roots</h2><br>
+				<h3 class="section-title">A  journey of Passion and Purpose</h3>
+				<div class="content">
+					<p>
+						Tanzania, my homeland, born in a small village, nestled in the northwestern part of the country. 
+						My parents, passionate farmers, instilled in me a strong work ethic and a deep appreciation for the land. 
+						Their dedication and love for their craft continue to inspire me to this day, fueling my determination to pursue my dreams despite any challenges that may come my along.
+					</p> <br>
+
+					<p>
+						At the tender age of eight, I embarked on a new chapter in my life, moving to Nairobi, Kenya, where I lived with a portion of my extended family. 
+						This significant transition marked the beginning of my personal journey, opening up a world of new opportunities for learning and personal growth.
+						 Navigating this change at such a young age undoubtedly shaped my perspective on life, instilling in me a sense of resilience and adaptability that has proven invaluable throughout my formative years.
+					
+					</p> <br>
+				</div>
+            <section>
+				<h2 class="section-title">Personal Growth</h2>
+				<div class="content">
+					<p> 
+				      Upon graduating from high school in Kenya, I found myself at a crossroads, facing the daunting task of charting my future path. 
+						While I possessed a natural inclination towards the social sector, my aspirations remained somewhat undefined.
+						 Seeking to gain practical experience and broaden my horizons, I delved into the world of work. My initial foray involved volunteering with the Red Cross,
+						  gaining valuable insights into the realm of public health. Simultaneously, I nurtured a growing interest in French culture, a fascination that would ultimately shape the course of my future endeavors.
+				   </p>
+				   <br>
+                    <p>
+					    After a year of immersive experiences and dedicated volunteer work,
+					  my passion for French culture had blossomed into a burning desire to fully immerse myself in its rich tapestry.
+					  At the age of 22, I embarked on a daring adventure, fulfilling a long-held dream of venturing to a new continent – France. This ambitious endeavor, however, came with a significant financial hurdle. 
+					  With  determination, I set out to accumulate the necessary funds, taking on various odd jobs, including work in the restaurant industry and providing tutoring and academic support to high school students.
+					   Through sheer hard work, unwavering perseverance, and the support of my family, I finally achieved my goal, landing in the vibrant city of Paris. 
+					 </p>
+				</div>
+			</section>
+
+			</section>
+
+            <section>
+				<h2 class="section-title">The evolution of my journey</h2>
+				<div class="content">
+					<p>Paris became a turning point in my life.
+					 The vibrant city streets served as my classroom, instilling valuable lessons in independence and self-reliance. While pursuing the Diploma of French as a Foreign Language,
+					  I experienced significant personal and academic growth. This journey was further enriched by teaching English to both children and adults, fostering cultural exchange and strengthening
+					   my communication skills through the challenges and rewards of language instruction.</p>
+					<br>
+					<p>
+                       Embracing new experiences became a constant theme. My initial path led me to a Bachelor's program in Education. However, after two years, I embarked on a self-discovery journey that led me to healthcare. 
+					   As an Educational and Social Support Worker, I supported individuals facing challenges. This role honed my interpersonal skills and instilled a deep understanding of compassion in healthcare. While a detour from my initial plan,
+					    this experience reaffirmed 
+					   my commitment to making a positive impact on the well-being of others. It became a pivotal moment, propelling me towards exploring new avenues for personal and professional development.
+					</p>
+
+					<br>
+					<p>
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title"> And now, how did I get into web development?</h2>
+				<div class="content">
+				<p>In navigating the challenges posed by website accessibility, I discovered a passion for bridging gaps and fostering autonomy in those I assisted.
+					Despite facing hurdles due to varying levels of literacy, I remained determined to empower individuals to navigate the online world confidently.
+				    Additionally, my desire to streamline cross-cultural experiences sparked ideas on simplifying travel planning and booking processes for seamless journeys. 
+					I would love to contribute to projects that  create tech-driven solutions that enhance accessibility and foster independence.
+
+                </p>
+				</div>
+			</section>
+
+
+			<section>
+				<h2 class="section-title">How do I envision this new profession?</h2>
+				<div class="content">
+					<p> The allure of software development lies in its power to conceive and craft solutions that genuinely address real-world problems. It extends far beyond merely designing websites or applications. I am committed to crafting meaningful experiences by understanding user needs, identifying pain points, proposing effective and accessible solutions, learning from each iteration, and continuously refining and enhancing the user journey.
+
+                 </p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
